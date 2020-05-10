@@ -9,11 +9,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import IState from '../../interfaces/state';
 import AddFail from './AddFailed';
 
-
 const useStyles = makeStyles({
   main: {
     width: '70%',
-  }
+  },
 });
 
 interface IProps {
@@ -21,7 +20,6 @@ interface IProps {
 }
 
 const LinksBody = (props: IProps) => {
-
   // @ts-ignore
   const classes = useStyles();
 
@@ -29,15 +27,15 @@ const LinksBody = (props: IProps) => {
     <Container className={classes.main}>
       <LogOut />
       <AddLink />
-      {props.state.links.map((val: any) => {
+      {props.state.links.map(val => {
         return <LinkItem props={val} />;
       })}
-      {props.state.addFailure ? <AddFail/> : null }
+      {props.state.addFailure ? <AddFail /> : null}
     </Container>
   );
 };
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: IState) => ({
   state: state,
 });
 
