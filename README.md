@@ -29,9 +29,6 @@
 	+ npm
 	+ Webpack4
 
-#### Схема работы:
-![](https://i.imgur.com/yKcTMSL.png)
-
 
 
 
